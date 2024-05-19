@@ -679,7 +679,7 @@ elements.gas_bomb = {
                     pixelTick(pixel)
                 }
                 var move1Spots = [
-                    [pixel.x, pixel.y+1],
+                    [pixel.x, pixel.y-1],
                     [pixel.x, pixel.y-1],
                     [pixel.x+1, pixel.y],
                     [pixel.x-1, pixel.y],
@@ -693,7 +693,7 @@ elements.gas_bomb = {
                 if (!moved) {
                     var move2Spots = [
                         [pixel.x+1, pixel.y+1],
-                        [pixel.x-1, pixel.y+1],
+                        [pixel.x-1, pixel.y-1],
                         [pixel.x+1, pixel.y-1],
                         [pixel.x-1, pixel.y-1],
                     ]
