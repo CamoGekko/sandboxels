@@ -712,7 +712,7 @@ elements.gas_bomb = {
         "XX|XX|XX",
         "XX|EX:10>explosion|XX",
         ],
-    density: 1300,
+    density: 1600,
     excludeRandom: true,
     ignore: "liquid_bomb",
     cooldown: defaultCooldown
