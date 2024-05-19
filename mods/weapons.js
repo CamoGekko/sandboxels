@@ -592,7 +592,7 @@ elements.energized_orb_down = {
     behavior: [
         "XX|EX:50>electric|XX",
         "XX|XX|XX",
-        "XX|EX:50>electric|XX"
+        "M2|M1 AND EX:50>electric|M2",
     ],
     state: "gas",
 },
