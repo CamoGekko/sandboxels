@@ -310,7 +310,7 @@ elements.gaster_blast_left = {
     state: "gas",
     insulate: true,
 },
-    elements.gaster_blast_left = {
+    elements.gaster_blast_down = {
     color: "#c5e9f0",
     behavior: [
         "DL|XX|DL",
