@@ -586,6 +586,16 @@ elements.energized_orb_left = {
     ],
     state: "gas",
 },
+elements.energized_orb_down = {
+    color: ["#e0e000","#f3f300"],
+    category: "energy",
+    behavior: [
+        "XX|EX:50>electric|XX",
+        "XX|XX|XX",
+        "XX|EX:50>electric|XX"
+    ],
+    state: "gas",
+},
 elements.energized_orb_right = {
     color: ["#e0e000","#f3f300"],
     category: "energy",
