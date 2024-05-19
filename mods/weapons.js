@@ -310,6 +310,34 @@ elements.gaster_blast_left = {
     state: "gas",
     insulate: true,
 },
+    elements.gaster_blast_left = {
+    color: "#c5e9f0",
+    behavior: [
+        "DL|XX|DL",
+        "XX|DL AND CR:gaster_blast_left%5|XX",
+        "DL|XX|DL",
+    ],
+    tick: function(pixel) {
+        for (var i=0; i<3; i++) {
+            if (!tryMove(pixel, pixel.x-2, pixel.y)) {
+                if (!isEmpty(pixel.x-2, pixel.y,true)) {
+                    var newPixel = pixelMap[pixel.x-2][pixel.y];
+                    if (newPixel.element === "gaster_blast_left") { break; }
+                    if (elements[newPixel.element].state == "gas") {
+                        if (Math.random() > (elements[newPixel.element].hardness || 0)) {
+                            if (elements[newPixel.element].breakInto) {
+                                breakPixel(newPixel);
+                            }
+                            else {
+                                deletePixel(newPixel.x, newPixel.y);
+                            }}}}
+                deletePixel(pixel.x,pixel.y);
+                break;
+            }}},
+    category: "energy",
+    state: "gas",
+    insulate: true,
+},
 elements.gaster_blast_right = {
     color: "#c5e9f0",
     behavior: [
